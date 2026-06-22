@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="LINDBERG professional resources hub." />
+  <title>LINDBERG — Professional Hub</title>
+  <style>
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --soft-white: rgba(255,255,255,.86);
+      --line: rgba(255,255,255,.58);
+      --line-hover: rgba(255,255,255,.95);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--black);
+      font-family: "Futura Std Light", "Futura Std", Futura, "Avenir Next", Arial, sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+    body { overflow-x: hidden; }
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: var(--white);
+      isolation: isolate;
+    }
+    .hero-video, .hero-poster {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -3;
+      filter: grayscale(100%);
+    }
+    .hero-poster { z-index: -4; }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.34) 0%, rgba(0,0,0,.22) 42%, rgba(0,0,0,.42) 100%);
+      z-index: -2;
+    }
+    .top-logo {
+      position: absolute;
+      top: 34px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(270px, 58vw);
+      height: auto;
+      filter: invert(1);
+      opacity: .96;
+    }
+    .content {
+      width: min(100%, 980px);
+      padding: 112px 28px 56px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100svh;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--soft-white);
+    }
+    h1 {
+      margin: 0;
+      color: var(--white);
+      font-weight: 300;
+      font-size: clamp(44px, 8vw, 98px);
+      line-height: .98;
+      letter-spacing: .015em;
+    }
+    .subtitle {
+      margin: 24px auto 0;
+      max-width: 560px;
+      color: rgba(255,255,255,.78);
+      font-size: clamp(14px, 1.8vw, 17px);
+      line-height: 1.55;
+    }
+    .actions {
+      margin-top: 42px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      min-width: min(100%, 260px);
+      padding: 14px 24px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--white);
+      background: rgba(255,255,255,.03);
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 1.2;
+      letter-spacing: .02em;
+      transition: border-color .18s ease, background .18s ease, transform .18s ease, opacity .18s ease;
+    }
+    .button:hover {
+      border-color: var(--line-hover);
+      background: rgba(255,255,255,.10);
+      transform: translateY(-1px);
+    }
+    .button:active { transform: translateY(0); opacity: .8; }
+    .footer-line {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(92%, 880px);
+      display: flex;
+      justify-content: center;
+      color: rgba(255,255,255,.66);
+      font-size: 11px;
+      line-height: 1.4;
+      text-align: center;
+    }
+    @media (max-width: 680px) {
+      .top-logo { top: 28px; width: min(218px, 66vw); }
+      .content { padding: 96px 22px 76px; }
+      .eyebrow { font-size: 10px; margin-bottom: 15px; }
+      h1 { font-size: clamp(40px, 13vw, 58px); }
+      .subtitle { margin-top: 20px; font-size: 14px; max-width: 320px; }
+      .actions { margin-top: 34px; gap: 11px; flex-direction: column; align-items: center; }
+      .button { width: min(100%, 330px); min-height: 50px; font-size: 13px; }
+      .footer-line { bottom: 18px; font-size: 10.5px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero" aria-label="LINDBERG professional resources hub">
+    <img class="hero-poster" src="assets/lindberg-video-poster.jpg" alt="" aria-hidden="true" />
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/lindberg-video-poster.jpg">
+      <source src="assets/Lindberg Video.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay" aria-hidden="true"></div>
+
+    <img class="top-logo" src="assets/lindberg-logo.png" alt="LINDBERG" />
+
+    <section class="content">
+      <p class="eyebrow">Professional resources</p>
+      <h1>Visionary by design</h1>
+      <p class="subtitle">Access your LINDBERG resources in one place.</p>
+
+      <nav class="actions" aria-label="LINDBERG resources">
+        <a class="button" href="https://eyelearn.keringeyewear.com/access/login" target="_blank" rel="noopener noreferrer">Train yourself with Kering Eyelearn</a>
+        <a class="button" href="https://my.keringeyewear.com/fr/login" target="_blank" rel="noopener noreferrer">Access to your B2B platform</a>
+        <a class="button" href="https://kering.sharepoint.com/:f:/r/sites/VisuelsMarquesKeringEyewearFrance/Shared%20Documents/0.CLIENTS/LINDBERG%20-%20Assets?csf=1&web=1&e=VXYjS3" target="_blank" rel="noopener noreferrer">Communicate with our assets</a>
+      </nav>
+    </section>
+
+    <div class="footer-line">LINDBERG | Kering Eyewear</div>
+  </main>
+</body>
+</html>

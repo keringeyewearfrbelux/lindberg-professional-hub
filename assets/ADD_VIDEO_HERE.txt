@@ -1,0 +1,1 @@
+Place your 1080p video in this assets folder and name it exactly: Lindberg Video.mp4
